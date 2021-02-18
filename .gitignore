@@ -1,2 +1,5 @@
 vendor
 wp-content
+composer.json
+composer.lock
+composer.phar
