@@ -22,6 +22,9 @@ function wp_rocket_remove_notices_helper() {
     if ( ! defined( 'WP_ROCKET_VERSION' ) ) {
         return;
     }
+
+    // Remove .htaccess file is not writable notice.
+    remove_action( 'admin_notices', 'rocket_warning_htaccess_permissions');
 }
 
 // Add action with a low priority value (higher priority) to remove notices.
