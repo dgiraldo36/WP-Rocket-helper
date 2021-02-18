@@ -12,3 +12,17 @@
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
+
+/**
+ * Function to remove WP Rocket notices about .htaccess 
+ * and advanced-cache.php files are not writable.
+ */
+function wp_rocket_remove_notices_helper() {
+    // If WP Rocket is not installed finish the execution.
+    if ( ! defined( 'WP_ROCKET_VERSION' ) ) {
+        return;
+    }
+}
+
+// Add action with a low priority value (higher priority) to remove notices.
+add_action( 'admin_notices', 'wp_rocket_remove_notices_helper', 5 );
