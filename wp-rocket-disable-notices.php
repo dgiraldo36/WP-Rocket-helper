@@ -9,3 +9,6 @@
  *
  * Copyright 2021 WP Rocket
  * */
+
+// If this file is called directly, abort.
+defined( 'ABSPATH' ) || exit;
