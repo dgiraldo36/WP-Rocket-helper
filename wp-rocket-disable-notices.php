@@ -24,7 +24,7 @@ function wp_rocket_remove_notices_helper() {
     }
 
     // Remove .htaccess file is not writable notice.
-    remove_action( 'admin_notices', 'rocket_warning_htaccess_permissions');
+    remove_action( 'admin_notices', 'rocket_warning_htaccess_permissions' );
 
     // Get AdvancedCache instance.
     $container              = apply_filters( 'rocket_container', null );
